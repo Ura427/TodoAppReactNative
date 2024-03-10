@@ -3,11 +3,10 @@ import { View, Text, StyleSheet, Pressable } from "react-native";
 function GoalItem({ index, item, dueDate, deleteGoalHandler }) {
   const hours = dueDate.getHours();
   const minutes = dueDate.getMinutes();
-  
+
   const formattedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
-  
+
   const formattedTime = `${hours}:${formattedMinutes}`;
-  
 
   return (
     <View key={index} style={styles.goalContainer}>
@@ -27,25 +26,22 @@ function GoalItem({ index, item, dueDate, deleteGoalHandler }) {
 const styles = StyleSheet.create({
   goalText: {
     color: "#fff",
-    fontWeight: "bold"
-    // padding: 8,
+    fontWeight: "bold",
   },
   goalContainer: {
     backgroundColor: "#00ADB5",
     marginBottom: 8,
     borderRadius: 4,
-    // flexDirection: "row",
-    // justifyContent: "space-between"
   },
-  textsContainer:{
+  textsContainer: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: 8
-  }, 
-  goalDueDate:{
-   color: "#eee"
-  }
+    padding: 8,
+  },
+  goalDueDate: {
+    color: "#eee",
+  },
 });
 
 export default GoalItem;
