@@ -167,9 +167,9 @@ const styles = StyleSheet.create({
     width: "100%",
   },
 
-  buttonContainer:{
-    flex:1,
-  }
+  buttonContainer: {
+    flex: 1,
+  },
 });
 
 export default GoalInput;
